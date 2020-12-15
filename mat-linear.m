@@ -50,3 +50,27 @@ plot(x0',x1','LineWidth',2.5)
 title('Phase plot')
 xlabel('x_{0}')
 ylabel('x_{1}')
+
+% Answer: Yes, x1 is greater than x0.
+
+%% Question (d)
+
+% It obtains a spiral sink behavior convering to a point which is seen in (c). 
+
+%% Question (e)
+
+% Matrix and initial value parameters
+A = [0.798 0.051; -0.715 1.088];
+xo = [1;0];
+
+% SVD decomposition
+[U,S,V] = svd(A); % A = U*S*V'
+
+u1 = U(:,1);
+u2 = U(:,2);
+
+v1 = V(:,1);
+v2 = V(:,2);
+
+s1 = S(1);
+s2 = S(2);
