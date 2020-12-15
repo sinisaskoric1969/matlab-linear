@@ -74,3 +74,27 @@ v2 = V(:,2);
 
 s1 = S(1);
 s2 = S(2);
+
+% Unit circle
+r=1;
+theta = linspace(0,2*pi,100);
+
+plot(r*cos(theta),r*sin(theta),'-','LineWidth',1.5)
+title('Unit circle and evolution of x(k)')
+xlabel('x_{0}')
+ylabel('x_{1}')
+axis equal
+
+hold on 
+plot(x0',x1','LineWidth',1.5)
+
+plot(u1(1),u1(2),'r*')
+plot(u2(1),u2(2),'g*')
+
+plot(v1(1),v1(2),'b*')
+plot(v2(1),v2(2),'k*')
+
+plot(s1,0,'m*')
+plot(s2,0,'c*')
+
+legend('unit circle','x(k)','u1','u2','v1','v2','s1','s2')
